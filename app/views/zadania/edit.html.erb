@@ -1,0 +1,17 @@
+<% provide(:title, "Edytuj zadanie") %>
+<h1>Update zadanie</h1>
+
+<div class="row">
+	
+		<%= form_for(@zadanium) do |f| %>
+			
+
+ 			<%= f.label :zadanium %>
+			<%= f.text_area :nazwa %>
+
+			<%= f.submit "Save changes", class: "btn btn-primary" %>
+			<%= link_to 'Usuń', zadania_path(@zadanium), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+		<% end %>
+	
+</div>

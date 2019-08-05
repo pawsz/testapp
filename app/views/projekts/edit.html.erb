@@ -1,0 +1,17 @@
+<% provide(:title, "Edytuj projekt") %>
+<h1>Update zadanie</h1>
+
+<div class="row">
+
+		<%= form_for(@projekt) do |f| %>
+
+
+ 			<%= f.label :projekt %>
+			<%= f.text_area :nazwa %>
+
+			<%= f.submit "Save changes", class: "btn btn-primary" %>
+			<%= link_to 'Usuń', projekt_path(@projekt), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+		<% end %>
+
+</div>

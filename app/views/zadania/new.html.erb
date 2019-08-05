@@ -1,0 +1,15 @@
+<h1>Dodaj zadanie</h1>
+
+<%= form_for(@zadania) do |f| %>  
+  <div class="field"> 
+    <%= f.label :zadanium %><br> 
+    <p>Nazwa zadania:</p><%= f.text_area :nazwa %> 
+    <p>Do kiedy:</p><%= f.text_area :termin %>
+    <p>Przydział:</p><%= f.text_area :przydzial %>
+    <p>Opis:</p><%= f.text_area :opis %>
+  </div> 
+  <div class="actions"> 
+    <%= f.submit "Stwórz" %> 
+  </div> 
+  <%= link_to 'Wróć', "/zadania" %>
+<% end %> 

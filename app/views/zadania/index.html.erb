@@ -1,0 +1,13 @@
+<h1>Zadania</h1>
+<% @zadania.each do |zadanium| %>
+			<div class="zadanie">
+
+  			<p class="content"><%= zadanium.nazwa %></p>
+  			<p class="content"><%= zadanium.opis %></p>
+  			<p class="content"><%= link_to "Edytuj", zadanium_path(zadanium) %>
+				<p class="content"><%= link_to "Usuń", zadanium_path(zadanium),
+					method: :delete, data: { confirm: 'Are you sure?' } %>
+
+			</div>
+		<% end %>
+<%= link_to 'Nowe zadanie', "zadania/new" %>
